@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { StyleSheet, View } from 'react-native'
-import AdsBanner from './src/components/AdsBanner'
-import Sum from './src/components/Sum'
+import { StyleSheet, Text, View } from 'react-native'
+import ImcScreen from './screens/ImcScreen'
+import AdsBanner from './components/AdsBanner'
 
 export default class App extends Component {
 
 	render() {
 		return (
 			<View style={styles.container}>
-				<Sum />
+				<ImcScreen />
 				<AdsBanner />
 			</View>
 		)
