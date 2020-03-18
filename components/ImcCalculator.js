@@ -21,7 +21,8 @@ const DismissKeybord = ({ children }) =>
     <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>{children}</TouchableWithoutFeedback>
 
 let initialGenderValue = {
-    genero: 'male'
+    genero: 'male',
+    color: 'initialColor'
 }
 
 let initialHeightValue = {
@@ -79,13 +80,13 @@ export default class ImcCalculator extends React.Component {
 
                     {/* Container de Genero */}
                     <View style={styles.genderContainer}>
-                        <TouchableOpacity onPress={() => this.setState({ genero: 'male' })}>
+                        <TouchableOpacity onPress={() => this.setState({ genero: 'male', color: '' })}>
                             <SymbolGenderIcon genero='male' size={80} />
                         </TouchableOpacity>
 
-                        <HumanGenderIcon genero={this.state.genero} size={150} />
+                        <HumanGenderIcon genero={this.state.genero} color={this.state.color} size={150} />
 
-                        <TouchableOpacity onPress={() => this.setState({ genero: 'female' })}>
+                        <TouchableOpacity onPress={() => this.setState({ genero: 'female', color: '' })}>
                             <SymbolGenderIcon genero='female' size={80} />
                         </TouchableOpacity>
                     </View>
